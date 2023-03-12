@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>penFormDialog</class>
+ <widget class="QDialog" name="penFormDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>413</width>
+    <height>393</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>样式编辑器</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="16" column="0" colspan="3">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QComboBox" name="comboBox">
+     <item>
+      <property name="text">
+       <string>空心</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+        <normaloff>:/new/prefix1/NoBrush.png</normaloff>:/new/prefix1/NoBrush.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>实心</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+        <normaloff>:/new/prefix1/solid.png</normaloff>:/new/prefix1/solid.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>渐变1</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+        <normaloff>:/new/prefix1/Dense_1.png</normaloff>:/new/prefix1/Dense_1.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>渐变2</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+        <normaloff>:/new/prefix1/Dense_2.png</normaloff>:/new/prefix1/Dense_2.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>渐变3</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+        <normaloff>:/new/prefix1/Dense_3.png</normaloff>:/new/prefix1/Dense_3.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>渐变4</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+        <normaloff>:/new/prefix1/Dense_4.png</normaloff>:/new/prefix1/Dense_4.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>渐变5</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+        <normaloff>:/new/prefix1/Dense_5.png</normaloff>:/new/prefix1/Dense_5.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>渐变6</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+        <normaloff>:/new/prefix1/Dense_6.png</normaloff>:/new/prefix1/Dense_6.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>渐变7</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+        <normaloff>:/new/prefix1/Dense_7.png</normaloff>:/new/prefix1/Dense_7.png</iconset>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>注记字体</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>线形</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QComboBox" name="comboBox_2">
+     <item>
+      <property name="text">
+       <string>实线</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+        <normaloff>:/new/prefix1/实线.png</normaloff>:/new/prefix1/实线.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>虚线</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+        <normaloff>:/new/prefix1/虚线.png</normaloff>:/new/prefix1/虚线.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>点线</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+        <normaloff>:/new/prefix1/点线.png</normaloff>:/new/prefix1/点线.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>点虚线</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+        <normaloff>:/new/prefix1/点虚线.png</normaloff>:/new/prefix1/点虚线.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>两点虚线</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+        <normaloff>:/new/prefix1/两点虚线.png</normaloff>:/new/prefix1/两点虚线.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>传统虚线</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+        <normaloff>:/new/prefix1/传统虚线.png</normaloff>:/new/prefix1/传统虚线.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>图形填充</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QFontComboBox" name="fontComboBox"/>
+   </item>
+   <item row="7" column="2">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>点击以选择颜色</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QComboBox" name="comboBox_3">
+     <item>
+      <property name="text">
+       <string>全局</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>框选</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>绘制颜色</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2">
+    <widget class="QSpinBox" name="spinBox">
+     <property name="value">
+      <number>15</number>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>线宽</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>样式类别</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>字体大小</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>输入整形线宽</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../../Desktop/gisSystem/Source/icon/image.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>penFormDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>penFormDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

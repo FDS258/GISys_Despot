@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1564</width>
+    <height>731</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1564</width>
+    <height>731</height>
+   </size>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>gisSystem</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 10pt &quot;Microsoft YaHei UI&quot;;</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>3</y>
+      <width>151</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="10,1,0">
+     <item>
+      <widget class="QTreeWidget" name="treeWidget">
+       <attribute name="headerVisible">
+        <bool>false</bool>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>图层组</string>
+        </property>
+       </column>
+       <item>
+        <property name="text">
+         <string>图层1</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="textEdit"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>10</y>
+      <width>351</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>属性表视窗</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableView" name="tableView"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1564</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDoc">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionOpenFile"/>
+    <addaction name="actionsaveFile"/>
+    <addaction name="actionsaveToFile"/>
+    <addaction name="actionsavePic"/>
+    <addaction name="actionsaveTo"/>
+    <addaction name="actionsprint"/>
+   </widget>
+   <widget class="QMenu" name="menuOther">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actioninstruction"/>
+    <addaction name="actionsabout"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuDb">
+    <property name="title">
+     <string>数据库</string>
+    </property>
+    <addaction name="actionconnect"/>
+    <addaction name="actionopenDataBase"/>
+    <addaction name="actionSaveToSql"/>
+   </widget>
+   <widget class="QMenu" name="menuTool">
+    <property name="title">
+     <string>工具条</string>
+    </property>
+    <addaction name="actionDraw"/>
+    <addaction name="actionEdit"/>
+    <addaction name="actionAnalysis"/>
+    <addaction name="actionDb"/>
+    <addaction name="actionTable"/>
+   </widget>
+   <addaction name="menuDoc"/>
+   <addaction name="menuDb"/>
+   <addaction name="menuTool"/>
+   <addaction name="menuOther"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionnewLayer"/>
+   <addaction name="actionnewLayerGroup"/>
+   <addaction name="actiondataPort"/>
+   <addaction name="actionsetCoordinate"/>
+   <addaction name="actionMove"/>
+   <addaction name="actionsheetZoom"/>
+   <addaction name="actionsetColor"/>
+   <addaction name="actiondelete"/>
+   <addaction name="actionnoSelect"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionpointEdit"/>
+   <addaction name="actionlineEdit"/>
+   <addaction name="actionbrLine"/>
+   <addaction name="actionbSplineCurve"/>
+   <addaction name="actionellipseEdit"/>
+   <addaction name="actionrecEdit"/>
+   <addaction name="actionregionEdit"/>
+   <addaction name="actiontextEdit"/>
+   <addaction name="separator"/>
+   <addaction name="actionhandSketch"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_3">
+   <property name="windowTitle">
+    <string>toolBar_3</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="actiondataTrans"/>
+   <addaction name="actiontif"/>
+   <addaction name="actionbuffer"/>
+   <addaction name="actiondbScanCluster"/>
+   <addaction name="actionrealDis"/>
+   <addaction name="actiondeleteAnalysis"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_4">
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar_4</string>
+   </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actiondataBase"/>
+   <addaction name="actiondataOrigin"/>
+   <addaction name="actionsqlEdit"/>
+   <addaction name="actionconnectToSql"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionpointEdit">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/点.png</normaloff>:/new/prefix1/点.png</iconset>
+   </property>
+   <property name="text">
+    <string>点绘制</string>
+   </property>
+  </action>
+  <action name="actionlineEdit">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/线.png</normaloff>:/new/prefix1/线.png</iconset>
+   </property>
+   <property name="text">
+    <string>线绘制</string>
+   </property>
+  </action>
+  <action name="actionregionEdit">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/区域.png</normaloff>:/new/prefix1/区域.png</iconset>
+   </property>
+   <property name="text">
+    <string>区绘制</string>
+   </property>
+   <property name="iconText">
+    <string>区绘制</string>
+   </property>
+  </action>
+  <action name="actiondataPort">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/打开文件.png</normaloff>:/new/prefix1/打开文件.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开文件</string>
+   </property>
+   <property name="toolTip">
+    <string>打开文件</string>
+   </property>
+  </action>
+  <action name="actionbuffer">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/地图-缓冲区分析.png</normaloff>:/new/prefix1/地图-缓冲区分析.png</iconset>
+   </property>
+   <property name="text">
+    <string>缓冲区分析</string>
+   </property>
+  </action>
+  <action name="actionsheetZoom">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/缩放.png</normaloff>:/new/prefix1/缩放.png</iconset>
+   </property>
+   <property name="text">
+    <string>图幅缩放</string>
+   </property>
+  </action>
+  <action name="actiondataBase">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/数据库.png</normaloff>:/new/prefix1/数据库.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存到数据库</string>
+   </property>
+  </action>
+  <action name="actiondataTrans">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/转换.png</normaloff>:/new/prefix1/转换.png</iconset>
+   </property>
+   <property name="text">
+    <string>数据转换</string>
+   </property>
+  </action>
+  <action name="actionsaveTo">
+   <property name="text">
+    <string>另存为图像</string>
+   </property>
+  </action>
+  <action name="actionsprint">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/打印.png</normaloff>:/new/prefix1/打印.png</iconset>
+   </property>
+   <property name="text">
+    <string>打印</string>
+   </property>
+  </action>
+  <action name="actioninstruction">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/说明.png</normaloff>:/new/prefix1/说明.png</iconset>
+   </property>
+   <property name="text">
+    <string>使用说明</string>
+   </property>
+  </action>
+  <action name="actionsabout">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/关于.png</normaloff>:/new/prefix1/关于.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于此版本</string>
+   </property>
+  </action>
+  <action name="actionhandSketch">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/手绘.png</normaloff>:/new/prefix1/手绘.png</iconset>
+   </property>
+   <property name="text">
+    <string>手绘板</string>
+   </property>
+  </action>
+  <action name="actiondelete">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/擦除.png</normaloff>:/new/prefix1/擦除.png</iconset>
+   </property>
+   <property name="text">
+    <string>清屏</string>
+   </property>
+  </action>
+  <action name="actionrecEdit">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/矩形.png</normaloff>:/new/prefix1/矩形.png</iconset>
+   </property>
+   <property name="text">
+    <string>矩形绘制</string>
+   </property>
+  </action>
+  <action name="actionellipseEdit">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/椭圆.png</normaloff>:/new/prefix1/椭圆.png</iconset>
+   </property>
+   <property name="text">
+    <string>圆绘制</string>
+   </property>
+  </action>
+  <action name="actionlayerAdd">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/图层.png</normaloff>:/new/prefix1/图层.png</iconset>
+   </property>
+   <property name="text">
+    <string>图层添加</string>
+   </property>
+  </action>
+  <action name="actionopenDataBase">
+   <property name="text">
+    <string>从数据库打开</string>
+   </property>
+  </action>
+  <action name="actionSaveToSql">
+   <property name="text">
+    <string>保存到数据库</string>
+   </property>
+  </action>
+  <action name="actionsetColor">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/调色板.png</normaloff>:/new/prefix1/调色板.png</iconset>
+   </property>
+   <property name="text">
+    <string>样式编辑</string>
+   </property>
+  </action>
+  <action name="actionnoSelect">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/取消.png</normaloff>:/new/prefix1/取消.png</iconset>
+   </property>
+   <property name="text">
+    <string>取消选中</string>
+   </property>
+  </action>
+  <action name="actionOpenFile">
+   <property name="text">
+    <string>打开文件</string>
+   </property>
+  </action>
+  <action name="actionconnectToSql">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/连接.png</normaloff>:/new/prefix1/连接.png</iconset>
+   </property>
+   <property name="text">
+    <string>连接到数据库</string>
+   </property>
+  </action>
+  <action name="actionconnect">
+   <property name="text">
+    <string>连接到数据库</string>
+   </property>
+  </action>
+  <action name="actionsaveFile">
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="actiontextEdit">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/造注记.png</normaloff>:/new/prefix1/造注记.png</iconset>
+   </property>
+   <property name="text">
+    <string>注记绘制</string>
+   </property>
+  </action>
+  <action name="actionnewLayer">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/加号.png</normaloff>:/new/prefix1/加号.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建图层</string>
+   </property>
+  </action>
+  <action name="actionbrLine">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/折线 .png</normaloff>:/new/prefix1/折线 .png</iconset>
+   </property>
+   <property name="text">
+    <string>多段线绘制</string>
+   </property>
+  </action>
+  <action name="actionMove">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/移动.png</normaloff>:/new/prefix1/移动.png</iconset>
+   </property>
+   <property name="text">
+    <string>移动要素</string>
+   </property>
+  </action>
+  <action name="actionopendb">
+   <property name="text">
+    <string>打开数据库</string>
+   </property>
+   <property name="toolTip">
+    <string>打开数据库</string>
+   </property>
+  </action>
+  <action name="actionnewLayerGroup">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/新建图层.png</normaloff>:/new/prefix1/新建图层.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建图层组</string>
+   </property>
+   <property name="toolTip">
+    <string>新建图层组</string>
+   </property>
+  </action>
+  <action name="actiondbScanCluster">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/聚类.png</normaloff>:/new/prefix1/聚类.png</iconset>
+   </property>
+   <property name="text">
+    <string>空间聚类</string>
+   </property>
+  </action>
+  <action name="actionrefresh">
+   <property name="text">
+    <string>刷新</string>
+   </property>
+  </action>
+  <action name="actiondeleteAnalysis">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/清空.png</normaloff>:/new/prefix1/清空.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除分析结果</string>
+   </property>
+  </action>
+  <action name="actionsaveToFile">
+   <property name="text">
+    <string>另存为</string>
+   </property>
+  </action>
+  <action name="actionsavePic">
+   <property name="text">
+    <string>保存为图像</string>
+   </property>
+  </action>
+  <action name="actionsetCoordinate">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/坐标.png</normaloff>:/new/prefix1/坐标.png</iconset>
+   </property>
+   <property name="text">
+    <string>设置坐标范围</string>
+   </property>
+   <property name="toolTip">
+    <string>设置坐标范围</string>
+   </property>
+  </action>
+  <action name="actionsqlEdit">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/数据结构.png</normaloff>:/new/prefix1/数据结构.png</iconset>
+   </property>
+   <property name="text">
+    <string>编辑数据结构</string>
+   </property>
+  </action>
+  <action name="actionDraw">
+   <property name="text">
+    <string>√ 绘制工具条</string>
+   </property>
+  </action>
+  <action name="actionEdit">
+   <property name="text">
+    <string>√ 编辑工具条</string>
+   </property>
+  </action>
+  <action name="actionAnalysis">
+   <property name="text">
+    <string>√ 分析工具条</string>
+   </property>
+  </action>
+  <action name="actionDb">
+   <property name="text">
+    <string>√ 数据库工具条</string>
+   </property>
+  </action>
+  <action name="actionbSplineCurve">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/贝塞尔曲线.png</normaloff>:/new/prefix1/贝塞尔曲线.png</iconset>
+   </property>
+   <property name="text">
+    <string>b样条曲线绘制</string>
+   </property>
+  </action>
+  <action name="actionTable">
+   <property name="text">
+    <string>√ 属性表视窗</string>
+   </property>
+  </action>
+  <action name="actionrealDis">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/距离.png</normaloff>:/new/prefix1/距离.png</iconset>
+   </property>
+   <property name="text">
+    <string>距离分析</string>
+   </property>
+  </action>
+  <action name="actiondataOrigin">
+   <property name="icon">
+    <iconset resource="../../../Desktop/gisSystem/Source/icon/image.qrc">
+     <normaloff>:/new/prefix1/数据源.png</normaloff>:/new/prefix1/数据源.png</iconset>
+   </property>
+   <property name="text">
+    <string>ODBC数据源</string>
+   </property>
+  </action>
+  <action name="actiontif">
+   <property name="text">
+    <string>导入栅格</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../../../Desktop/gisSystem/Source/icon/image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
