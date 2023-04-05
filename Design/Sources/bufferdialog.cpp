@@ -119,7 +119,7 @@ void bufferDialog::on_buttonBox_accepted()
                 {//凸点
                     tempV.clear();
                     tempV = p->convexPoint(temp, p->r);
-                    //bufferResult.insert(bufferResult.end(), tempV.begin(), tempV.end());//添加到结果集中
+                    //bufferResult.insert(bufferResult.end(), tempV.begin(), tempV.end());//添加到结果中
                     sizeTemp = tempV.size();
                     for (int i = 0; i < sizeTemp; i++)
                     {
@@ -130,7 +130,7 @@ void bufferDialog::on_buttonBox_accepted()
                 {
                     tempV.clear();
                     tempV = p->concavePoint(temp, p->r);
-                    //bufferResult.insert(bufferResult.end(), tempV.begin(), tempV.end());//添加到结果集中
+                    //bufferResult.insert(bufferResult.end(), tempV.begin(), tempV.end());//添加到结果中
                     sizeTemp = tempV.size();
                     for (int i = 0; i < sizeTemp; i++)
                     {
