@@ -17,7 +17,7 @@ public:
     ~bufferDialog();
 
     MainWindow *p=new MainWindow;
-    QString text="缓冲区分析中";
+    QString text="正在进行缓冲区分析";
 
 private slots:
     void on_buttonBox_accepted();
